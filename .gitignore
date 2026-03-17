@@ -1,0 +1,44 @@
+# Python
+__pycache__/
+*.pyc
+
+# Virtual environment
+venv/
+.env
+.env.local
+ENV/
+*.venv
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Build files
+*.egg-info/
+dist/
+build/
+
+# Temporary files
+*.tmp
+*.temp
+
+# Local test files
+quick_test.py
+TESTING.md
+使用指南.md
+test_sdk.py
+test_raw_api.py
+*.py.bak
+minimal_example.py
+
+# Coverage report
+htmlcov/
+.pytest_cache/
+.coverage
+
+# Logs
+*.log

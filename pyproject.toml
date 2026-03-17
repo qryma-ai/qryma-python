@@ -1,0 +1,27 @@
+[tool.poetry]
+name = "qryma-python"
+version = "0.1.0"
+description = "Qryma Search API Python SDK"
+authors = ["Qryma Team <team@qryma.com>"]
+readme = "README.md"
+packages = [{include = "qryma"}]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+requests = "^2.28.0"
+
+[tool.poetry.dev-dependencies]
+pytest = "^7.0"
+pytest-cov = "^4.0"
+black = "^23.0"
+flake8 = "^6.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
