@@ -27,7 +27,7 @@ pip install qryma-python
 ```python
 # To install: pip install qryma-python
 from qryma import QrymaClient
-client = QrymaClient("ak-e0851bc87d4e4876a54324e58580f920")
+client = QrymaClient("ak-********************")
 response = client.search(
   "start": 0,
   "safe": false,
