@@ -29,9 +29,10 @@ pip install qryma-python
 from qryma import QrymaClient
 client = QrymaClient("ak-********************")
 response = client.search(
-  "start": 0,
-  "safe": false,
-  "detail": false
+    query="artificial intelligence",
+    start=0,
+    safe=False,
+    detail=False
 )
 print(response)
 ```

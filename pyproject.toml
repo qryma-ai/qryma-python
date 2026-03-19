@@ -2,7 +2,7 @@
 name = "qryma-python"
 version = "0.1.0"
 description = "Qryma Search API Python SDK"
-authors = ["Qryma Team <team@qryma.com>"]
+authors = ["Qryma Team <support@qryma.com>"]
 readme = "README.md"
 packages = [{include = "qryma"}]
 
