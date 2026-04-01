@@ -32,7 +32,7 @@ response = client.search(
     query="artificial intelligence",
     start=0,
     safe=False,
-    detail=False
+    mode="snippet"
 )
 print(response)
 ```
@@ -53,7 +53,7 @@ print(response)
 ```python
 from qryma import QrymaClient
 client = QrymaClient("ak-********************")
-response = client.search(query="machine learning tutorials", lang="en", start=0, safe=False, detail=False)
+response = client.search(query="machine learning tutorials", lang="en", start=0, safe=False, mode="snippet")
 print(response)
 ```
 
@@ -119,7 +119,7 @@ QrymaClient(api_key: str, base_url: str = "https://search.qryma.com", timeout: i
 
 #### Methods
 
-##### search(query: str = "", lang: str = "", start: int = 0, safe: bool = False, detail: bool = False) -> Dict[str, Any]
+##### search(query: str = "", lang: str = "", start: int = 0, safe: bool = False, mode: str = "snippet") -> Dict[str, Any]
 
 Perform a search with the given query and return the raw API response.
 
@@ -128,7 +128,7 @@ Perform a search with the given query and return the raw API response.
 - `lang`: Language code for search results (e.g., 'am' for Amharic, 'en' for English) (optional)
 - `start`: Starting position of results (optional, default: 0)
 - `safe`: Safe search mode: True or False (optional, default: False)
-- `detail`: Include detailed results (optional, default: False)
+- `mode`: Result detail mode: 'snippet' for brief descriptions or 'fulltext' for detailed content (optional, default: 'snippet')
 
 **Returns:**
 - Raw API response dictionary containing the search results
