@@ -36,7 +36,6 @@ class QrymaClient:
         self,
         query: str = "",
         lang: str = "",
-        start: int = 0,
         safe: bool = False,
         mode: str = "snippet",
         max_results: int = 5
@@ -47,7 +46,6 @@ class QrymaClient:
         Args:
             query: The search query string (optional)
             lang: Language code for search results (e.g., 'am' for Amharic, 'en' for English) (optional)
-            start: Starting position of results (default: 0)
             safe: Safe search mode: True , False (default: False)
             mode: Result detail mode: 'snippet' for brief descriptions or 'fulltext' for detailed content (default: 'snippet')
             max_results: Maximum number of results to return (1-10, default: 5)
@@ -75,7 +73,6 @@ class QrymaClient:
         payload = {
             "query": query,
             "lang": lang,
-            "start": start,
             "safe": safe,
             "mode": mode,
             "max_results": max_results

@@ -30,9 +30,9 @@ from qryma import QrymaClient
 client = QrymaClient("ak-********************")
 response = client.search(
     query="artificial intelligence",
-    start=0,
     safe=False,
-    mode="snippet"
+    mode="snippet",
+    max_results=5
 )
 print(response)
 ```
@@ -53,7 +53,7 @@ print(response)
 ```python
 from qryma import QrymaClient
 client = QrymaClient("ak-********************")
-response = client.search(query="machine learning tutorials", lang="en", start=0, safe=False, mode="snippet")
+response = client.search(query="machine learning tutorials", lang="en", safe=False, mode="snippet", max_results=5)
 print(response)
 ```
 
@@ -87,7 +87,8 @@ The `search()` method returns the raw API response in the following format:
       "link": "https://example.com",
       "position": 1,
       "site_name": "Example.com",
-      "snippet": "Description text..."
+      "snippet": "Description text...",
+      "text": "Full text..."
     }
   ]
 }
@@ -100,6 +101,7 @@ The `search()` method returns the raw API response in the following format:
 - `position`: Position in the results list
 - `site_name`: Name of the website
 - `snippet`: Brief description or excerpt from the page
+- `text`: Full text of the page
 
 ## API Reference
 
@@ -119,16 +121,16 @@ QrymaClient(api_key: str, base_url: str = "https://search.qryma.com", timeout: i
 
 #### Methods
 
-##### search(query: str = "", lang: str = "", start: int = 0, safe: bool = False, mode: str = "snippet") -> Dict[str, Any]
+##### search(query: str = "", lang: str = "", safe: bool = False, mode: str = "snippet", max_results: int = 5) -> Dict[str, Any]
 
 Perform a search with the given query and return the raw API response.
 
 **Parameters:**
 - `query`: Search query string (optional)
 - `lang`: Language code for search results (e.g., 'am' for Amharic, 'en' for English) (optional)
-- `start`: Starting position of results (optional, default: 0)
 - `safe`: Safe search mode: True or False (optional, default: False)
 - `mode`: Result detail mode: 'snippet' for brief descriptions or 'fulltext' for detailed content (optional, default: 'snippet')
+- `max_results`: Maximum number of results to return (1-10, optional, default: 5)
 
 **Returns:**
 - Raw API response dictionary containing the search results
