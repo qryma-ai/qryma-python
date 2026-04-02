@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "qryma-python"
-version = "0.1.1"
+version = "0.1.2"
 description = "Qryma Search API Python SDK"
 authors = ["Qryma Team <support@qryma.com>"]
 readme = "README.md"
